@@ -8,9 +8,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="first-top-headerrr">
-                    <h5>Work Sites</h5>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Create Work
-                        Site</button>
+                    <h5>Media</h5>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">upload</button>
                 </div>
                 <div class="mt-5 main-card-container">
                     <ul>

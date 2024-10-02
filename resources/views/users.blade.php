@@ -28,56 +28,56 @@
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
                             <tr>
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Johar town</td>
                                 <td>karachi</td>
-                                <td><button class="edit mr-2">edit</button> <button class="delete">Delete</button></td>
+                                <td><button class="edit mr-2"><i class="fa-solid fa-pen-to-square"></i></button> <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
                             </tr>
 
 

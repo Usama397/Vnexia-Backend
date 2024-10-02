@@ -1,4 +1,4 @@
-*{
+*, html{
     padding: 0;
     margin: 0;
 }
@@ -56,7 +56,7 @@ section.login-sec {
 /* nav-bar section  */
 
 nav{
-    position: relative;
+    position: fixed;
     top: 0;
     bottom: 0;
     height: 100%;
@@ -132,21 +132,20 @@ nav ul li ul li {
 nav ul li:nth-child(1)::after {
     background: transparent;
 }
-body.dashboard-layout {
+.dashboard-layout {
     display: flex;
+    height: 100vh;
 }
 
-body.dashboard-layout .first-side-nav {
+.dashboard-layout .first-side-nav {
     flex: 0 0 280px;
 }
 
-body.dashboard-layout .body-sec {
+.dashboard-layout .body-sec {
     flex: 0 0 78%;
-    
-    !I;!;
 }
 
-body.dashboard-layout .body-sec .secon-side-nav {
+.dashboard-layout .body-sec .secon-side-nav {
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
@@ -154,19 +153,19 @@ body.dashboard-layout .body-sec .secon-side-nav {
     border-bottom: 2px solid;
 }
 
-body.dashboard-layout .body-sec .secon-side-nav .welcome-start h2 {
+.dashboard-layout .body-sec .secon-side-nav .welcome-start h2 {
     font-size: 22px;
 }
 
 
-body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul {
+.dashboard-layout .body-sec .secon-side-nav .nav-userss ul {
     display: flex;
     align-items: center;
     gap: 30px;
     list-style: none;
 }
 
-body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li select {
+.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li select {
     border-radius: 20px;
     background: #14173A;
     color: white;
@@ -176,7 +175,7 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li select {
 
 
 
-body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header {
+.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -184,13 +183,13 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_ca
 
 
 
-body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header .user-name h4 {
+.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header .user-name h4 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
 }
 
-body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header .user-name p {
+.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_card-header .user-name p {
     font-size: 12px;
     margin: 0;
 }
@@ -200,6 +199,7 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_ca
     color: white;
     border-radius: 20px;
     padding: 20px;
+    height: 364px;
 }
 
 .main_risk h4 {
@@ -208,7 +208,7 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_ca
 }
 
 .main_risk .main-risk-table  table.table {
-    background: transparent !important;!i;!;
+    background: transparent !important;
     width: 80%;
     margin: 0 auto 10px;
 }
@@ -229,6 +229,7 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_ca
     display: flex;
     list-style: none;
     justify-content: space-between;
+    padding: 0;
 }
 
 .main_counts-listing ul li {
@@ -245,7 +246,7 @@ body.dashboard-layout .body-sec .secon-side-nav .nav-userss ul li .main_users_ca
 .main_counts-listing ul li img {
     width: 40px;
     height: 40px;
-    margin: 0 auto 10px;
+    margin: 10px auto 20px;
 }
 nav ul li a.navigat-items.active {position: relative;}
 
@@ -254,9 +255,9 @@ nav ul li a.navigat-items.active::after {
     display: block;
     position: absolute;
     background: #D9D9D9;
-    width: 200px;
+    width: 220px;
     height: 37px;
-    opacity: .6;
+    opacity: .4;
     padding: 20px 10px 10px 10px;
     left: 0;
     border-radius: 11px;
@@ -308,7 +309,7 @@ section.work-site.mt-3 .mt-5.main-card-container ul li .work-site-box .work-site
     width: 100%;
 }
 
-.container,.container-fluid {
+.container {
     width: 85%;
 }
 
@@ -426,9 +427,10 @@ section.work-site.mt-3 .mt-5.area-boxes ul li .area {
     width: auto;
     padding: 10px 27px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     color: black;
     font-size: 18px;
+    width: 200px;
 }
 .modal-content .modal-body form .flex-input .device-status {
     display: flex;
@@ -548,7 +550,6 @@ section.work-site.mt-3 .main-natification-table .main_loadmore-btn button.load-m
     flex-wrap: wrap;
     justify-content: start;
 }
-.modal-content .modal-body .main-checkboxx.child-workside {}
 
 .modal-content .modal-body .main-checkboxx.child-workside ul {
     display: flex;
@@ -623,4 +624,162 @@ section.work-site.mt-3 .mt-5.main-safety-card ul li .safety-card .icons {
     font-size: 11px;
     flex: 0 0 80% !important;
     margin: 0 0 0 10px;
+}
+.main_bar_graph {
+    border: 2px solid #000000;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.main_bar_graph canvas#myChart {
+    width: 90% !important;
+    margin: 0 auto;
+    height: 340px !important;
+}
+.main_risk .main-risk-table table.table thead.thead-dark tr th {
+    border: 1px solid white;
+}
+
+
+
+.main_risk .main-risk-table table.table thead.thead-dark tr th:first-child {
+    border-radius: 10px 0 0 0;
+    border-collapse: collapse;
+    display: block;
+    flex: 0  0 70%;
+}
+
+.main_risk .main-risk-table table.table thead.thead-dark tr th:last-child {
+    border-radius: 0 7px 0 0;
+    border-collapse: collapse;
+    display: block;
+    flex: 0 0 30%;
+}
+
+.main_risk .main-risk-table table.table thead.thead-dark tr {
+    display: flex;
+}
+
+.main_risk .main-risk-table table.table tbody tr td:first-child {
+    flex: 0 0 70%;
+}
+
+.main_risk .main-risk-table table.table tbody tr {
+    display: flex;
+}
+
+.main_risk .main-risk-table table.table tbody tr td:last-child {
+    flex: 0 0 30%;
+}
+
+
+.main_risk .main-risk-table table.table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.main_risk .main-risk-table table.table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+.container-fluid {
+    padding: 0;
+}
+
+@media only screen and (max-width:2000px){
+
+    
+    section.mt-2 .container-fluid .row {
+        justify-content: space-between !important;
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+    
+    .dashboard-layout .body-sec {
+        width: calc(100% - 280px);
+        max-width: calc(100% - 280px) ;
+        flex: unset;
+    }
+}
+
+
+nav ul li ul {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+nav ul li:hover ul {
+    max-height: 42px;
+    opacity: 1;
+}
+
+
+
+nav ul li ul.active {
+    max-height: 43px;
+    opacity: 1;
+    padding: 0 0 0 26px;
+}
+
+
+nav ul li ul.active li a.navigat-items.active::after {
+    width: 199px;
+}
+section.work-site.mt-3 .main-natification-table table.table tbody tr td button {
+    border: 0;
+    background: #14173a;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+section.work-site.mt-3 .main-natification-table table.table tbody tr td button svg {
+    font-size: 15px;
+    color: white;
+}
+
+
+section.work-site.mt-3 .mt-5.area-boxes ul li {position: relative;}
+
+section.work-site.mt-3 .mt-5.area-boxes ul li ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    top: 30px;
+    bottom: unset;
+    transition: opacity .5s ease, top .5s ease;
+}
+
+section.work-site.mt-3 .mt-5.area-boxes ul li:hover ul {
+    opacity: 1;
+    top: 9px;
+    left: -40px;
+}
+
+section.work-site.mt-3 .mt-5.area-boxes ul li ul li button {
+    border: 0;
+    background: #14173a;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+section.work-site.mt-3 .mt-5.area-boxes ul li ul li button svg {
+    font-size: 15px;
+    color: white;
+}
+
+section.work-site.mt-3 .mt-5.area-boxes ul li:hover .area {
+    background: #00000096;
+    color: #14173aad;
 }

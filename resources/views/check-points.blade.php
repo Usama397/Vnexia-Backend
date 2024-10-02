@@ -15,18 +15,38 @@
                     <ul>
                         <li>
                             <div class="area">Insulated Gloves</div>
+                            <ul>
+                                <li><button><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Helmet</div>
+                            <ul>
+                                <li><button><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Insulated Shoes</div>
+                            <ul>
+                                <li><button><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Body Harness</div>
+                            <ul>
+                                <li><button><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Glasses</div>
+                            <ul>
+                                <li><button><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

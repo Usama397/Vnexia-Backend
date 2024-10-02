@@ -3,8 +3,8 @@
 
 @section('contents')
 
-<section class="mt-2">
-    <div class="container-fluid">
+<section class="work-site mt-2">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="main_bar_graph">
@@ -54,17 +54,17 @@
                 <div class="main_counts-listing">
                     <ul>
                         <li>
-                            <img src="assets/images/user-nav.png" alt="">
+                            <img src="assets/images/dash-users.png" alt="">
                             <h5>Users</h5>
                             <p>24</p>
                         </li>
                         <li>
-                            <img src="assets/images/construction-site-nav.png" alt="">
+                            <img src="assets/images/dash-work.png" alt="">
                             <h5>Work Sites</h5>
                             <p>4</p>
                         </li>
                         <li>
-                            <img src="assets/images/alarm-nav.png" alt="">
+                            <img src="assets/images/dash-alarm.png" alt="">
                             <h5>Notifications</h5>
                             <p>50</p>
                         </li>

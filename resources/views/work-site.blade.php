@@ -23,11 +23,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
@@ -51,11 +51,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
@@ -79,11 +79,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
@@ -107,11 +107,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
@@ -135,11 +135,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
@@ -163,11 +163,11 @@
                                     <h6>Work Site 01 </h6>
                                     <ul>
                                         <li>
-                                            <span><img src="assets/images/user-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-user.png" alt=""></span>
                                             <span>50</span>
                                         </li>
                                         <li>
-                                            <span><img src="assets/images/alarm-nav.png" alt=""></span>
+                                            <span><img src="assets/images/black-alarm.png" alt=""></span>
                                             <span>10</span>
                                         </li>
                                         <li>
