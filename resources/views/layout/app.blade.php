@@ -33,7 +33,7 @@
                             </a></li>
                         <li><a href="{{route('notification')}}" class="navigat-items">
                                 <img src="{{asset('assets/images/alarm-nav.png')}}" alt="">
-                                <span class="nav-item">Notifications</span>
+                                <span class="nav-item">Communication</span>
                             </a></li>
                         <li><a href="{{route('safety-guidelines')}}" class="navigat-items">
                                 <img src="{{asset('assets/images/checking-nav.png')}}" alt="">
@@ -180,56 +180,154 @@ if (currentPath === '/check-points') {
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Get the modals
+        // Parent Modal with Two Child Modals (exampleModal, exampleModal1, exampleModal2)
         const parentModalElement = document.getElementById('exampleModal');
-        const childModalElement = document.getElementById('exampleModal1');
-        const childModalElement1 = document.getElementById('exampleModal2');
-        // Initialize Bootstrap modals using JavaScript API
-        const parentModal = new bootstrap.Modal(parentModalElement);
-        const childModal = new bootstrap.Modal(childModalElement);
-        const childModal1 = new bootstrap.Modal(childModalElement1);
+        const childModalElement1 = document.getElementById('exampleModal1');
+        const childModalElement2 = document.getElementById('exampleModal2');
 
-        // Show the parent modal when the child modal is closed
-        childModalElement.addEventListener('hidden.bs.modal', function () {
-            parentModal.show();
-        });
+        if (parentModalElement && childModalElement1 && childModalElement2) {
+            const parentModal = new bootstrap.Modal(parentModalElement);
+            const childModal1 = new bootstrap.Modal(childModalElement1);
+            const childModal2 = new bootstrap.Modal(childModalElement2);
 
-        // Hide the parent modal when the child modal is shown
-        childModalElement.addEventListener('show.bs.modal', function () {
-            parentModal.hide();
-        });
-         // Show the parent modal when the child modal is closed
-         childModalElement1.addEventListener('hidden.bs.modal', function () {
-            parentModal.show();
-        });
+            function handleModalToggle(childModalElement, parentModal) {
+                childModalElement.addEventListener('hidden.bs.modal', function () {
+                    parentModal.show();
+                });
 
-        // Hide the parent modal when the child modal is shown
-        childModalElement1.addEventListener('show.bs.modal', function () {
-            parentModal.hide();
-        });
+                childModalElement.addEventListener('show.bs.modal', function () {
+                    parentModal.hide();
+                });
+            }
+
+            handleModalToggle(childModalElement1, parentModal);
+            handleModalToggle(childModalElement2, parentModal);
+        }
+
+        // Separate Parent Modal with One Child Modal (exampleModal3, exampleModal4)
+        const singleParentModalElement = document.getElementById('exampleModal3');
+        const singleChildModalElement = document.getElementById('exampleModal4');
+
+        if (singleParentModalElement && singleChildModalElement) {
+            const singleParentModal = new bootstrap.Modal(singleParentModalElement);
+            const singleChildModal = new bootstrap.Modal(singleChildModalElement);
+
+            singleChildModalElement.addEventListener('hidden.bs.modal', function () {
+                singleParentModal.show();
+            });
+
+            singleChildModalElement.addEventListener('show.bs.modal', function () {
+                singleParentModal.hide();
+            });
+        }
     });
 </script>
 
-
+<!-- JavaScript to Handle Icon Population and Selection -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Get the modals
-        const parentModalElement = document.getElementById('exampleModal');
-        const childModalElement = document.getElementById('exampleModal1');
-        // Initialize Bootstrap modals using JavaScript API
-        const parentModal = new bootstrap.Modal(parentModalElement);
-        const childModal = new bootstrap.Modal(childModalElement);
+        // List of 300+ Font Awesome icons to display
+        const allIcons = [
+        "fa-solid fa-house", "fa-solid fa-car", "fa-solid fa-cog", "fa-solid fa-bell", "fa-solid fa-user",
+        "fa-solid fa-tree", "fa-solid fa-camera", "fa-solid fa-heart", "fa-solid fa-map", "fa-solid fa-shield",
+        "fa-solid fa-home", "fa-solid fa-check", "fa-solid fa-plus", "fa-solid fa-envelope", "fa-solid fa-lock",
+        "fa-solid fa-key", "fa-solid fa-trash", "fa-solid fa-pen", "fa-solid fa-pencil-alt", "fa-solid fa-search",
+        "fa-solid fa-comment", "fa-solid fa-bug", "fa-solid fa-rocket", "fa-solid fa-code", "fa-solid fa-server",
+        "fa-solid fa-music", "fa-solid fa-headphones", "fa-solid fa-book", "fa-solid fa-bookmark", "fa-solid fa-phone",
+        "fa-solid fa-laptop", "fa-solid fa-desktop", "fa-solid fa-tablet", "fa-solid fa-mobile", "fa-solid fa-sitemap",
+        "fa-solid fa-umbrella", "fa-solid fa-graduation-cap", "fa-solid fa-lightbulb", "fa-solid fa-paint-brush", "fa-solid fa-palette",
+        "fa-solid fa-wallet", "fa-solid fa-shopping-cart", "fa-solid fa-box", "fa-solid fa-certificate", "fa-solid fa-coffee",
+        "fa-solid fa-hammer", "fa-solid fa-hard-hat", "fa-solid fa-wrench", "fa-solid fa-briefcase", "fa-solid fa-globe",
+        "fa-solid fa-glass", "fa-solid fa-gift", "fa-solid fa-pizza-slice", "fa-solid fa-birthday-cake", "fa-solid fa-bomb",
+        "fa-solid fa-dice", "fa-solid fa-gamepad", "fa-solid fa-keyboard", "fa-solid fa-microchip", "fa-solid fa-tv",
+        "fa-solid fa-video", "fa-solid fa-mouse", "fa-solid fa-project-diagram", "fa-solid fa-puzzle-piece", "fa-solid fa-robot",
+        "fa-solid fa-screwdriver", "fa-solid fa-shapes", "fa-solid fa-sitemap", "fa-solid fa-traffic-light", "fa-solid fa-trophy",
+        "fa-solid fa-tools", "fa-solid fa-truck", "fa-solid fa-warehouse", "fa-solid fa-weight-hanging", "fa-solid fa-window-maximize",
+        "fa-solid fa-window-minimize", "fa-solid fa-wrench", "fa-regular fa-address-book", "fa-regular fa-address-card", 
+        "fa-regular fa-angry", "fa-regular fa-arrow-alt-circle-down", "fa-regular fa-arrow-alt-circle-left", 
+        "fa-regular fa-arrow-alt-circle-right", "fa-regular fa-arrow-alt-circle-up", "fa-regular fa-bell-slash", 
+        "fa-regular fa-calendar-alt", "fa-regular fa-calendar-check", "fa-regular fa-calendar-minus", 
+        "fa-regular fa-calendar-plus", "fa-regular fa-calendar-times", "fa-regular fa-caret-square-down", 
+        "fa-regular fa-caret-square-left", "fa-regular fa-caret-square-right", "fa-regular fa-caret-square-up", 
+        "fa-regular fa-chart-bar", "fa-regular fa-check-circle", "fa-regular fa-check-square", "fa-regular fa-circle", 
+        "fa-regular fa-clipboard", "fa-regular fa-clock", "fa-regular fa-clone", "fa-regular fa-closed-captioning", 
+        "fa-regular fa-comment-alt", "fa-regular fa-comment-dots", "fa-regular fa-comments", "fa-regular fa-compass", 
+        "fa-regular fa-copy", "fa-regular fa-credit-card", "fa-regular fa-dizzy", "fa-regular fa-dot-circle", 
+        "fa-regular fa-edit", "fa-regular fa-envelope-open", "fa-regular fa-eye-slash", "fa-regular fa-file-alt", 
+        "fa-regular fa-file-archive", "fa-regular fa-file-audio", "fa-regular fa-file-code", "fa-regular fa-file-excel", 
+        "fa-regular fa-file-image", "fa-regular fa-file-pdf", "fa-regular fa-file-powerpoint", "fa-regular fa-file-video", 
+        "fa-regular fa-file-word", "fa-regular fa-flag", "fa-regular fa-flushed", "fa-regular fa-folder-minus", 
+        "fa-regular fa-folder-plus", "fa-regular fa-frown-open", "fa-regular fa-futbol", "fa-regular fa-gem", 
+        "fa-regular fa-grimace", "fa-regular fa-grin", "fa-regular fa-grin-alt", "fa-regular fa-grin-beam", 
+        "fa-regular fa-grin-beam-sweat", "fa-regular fa-grin-hearts", "fa-regular fa-grin-squint", "fa-regular fa-grin-squint-tears", 
+        "fa-regular fa-grin-stars", "fa-regular fa-grin-tears", "fa-regular fa-grin-tongue", "fa-regular fa-grin-tongue-squint", 
+        "fa-regular fa-grin-tongue-wink", "fa-regular fa-grin-wink", "fa-regular fa-hand-lizard", "fa-regular fa-hand-paper", 
+        "fa-regular fa-hand-point-down", "fa-regular fa-hand-point-left", "fa-regular fa-hand-point-right", 
+        "fa-regular fa-hand-point-up", "fa-regular fa-hand-scissors", "fa-regular fa-hand-spock", 
+        "fa-regular fa-handshake", "fa-regular fa-hdd", "fa-regular fa-heart", "fa-regular fa-hospital", 
+        "fa-regular fa-hourglass", "fa-regular fa-id-badge", "fa-regular fa-id-card", "fa-regular fa-image", 
+        "fa-regular fa-images", "fa-regular fa-keyboard", "fa-regular fa-kiss", "fa-regular fa-kiss-beam", 
+        "fa-regular fa-kiss-wink-heart", "fa-regular fa-laugh", "fa-regular fa-laugh-beam", 
+        "fa-regular fa-laugh-squint", "fa-regular fa-laugh-wink",
+        "fa-brands fa-adobe", "fa-brands fa-airbnb", "fa-brands fa-amazon", "fa-brands fa-android", 
+        "fa-brands fa-apple", "fa-brands fa-aws", "fa-brands fa-bity", "fa-brands fa-blackberry", 
+        "fa-brands fa-blogger", "fa-brands fa-bootstrap", "fa-brands fa-btc", "fa-brands fa-centos", 
+        "fa-brands fa-cloudscale", "fa-brands fa-codepen", "fa-brands fa-css3", "fa-brands fa-drupal", 
+        "fa-brands fa-dropbox", "fa-brands fa-facebook-f", "fa-brands fa-firefox", "fa-brands fa-github-alt", 
+        "fa-brands fa-google-drive", "fa-brands fa-google-play", "fa-brands fa-hacker-news", "fa-brands fa-html5",
+        "fa-brands fa-java", "fa-brands fa-js", "fa-brands fa-kickstarter", "fa-brands fa-linkedin-in", 
+        "fa-brands fa-linux", "fa-brands fa-magento", "fa-brands fa-microsoft", "fa-brands fa-node", 
+        "fa-brands fa-php", "fa-brands fa-python", "fa-brands fa-reddit", "fa-brands fa-safari", 
+        "fa-brands fa-sass", "fa-brands fa-skype", "fa-brands fa-slack", "fa-brands fa-spotify", 
+        "fa-brands fa-stack-exchange", "fa-brands fa-stack-overflow", "fa-brands fa-steam", 
+        "fa-brands fa-studiovinari", "fa-brands fa-telegram", "fa-brands fa-trello", "fa-brands fa-tumblr", 
+        "fa-brands fa-twitter-square", "fa-brands fa-viber", "fa-brands fa-vimeo", "fa-brands fa-vk", 
+        "fa-brands fa-whatsapp", "fa-brands fa-wikipedia-w", "fa-brands fa-wordpress", "fa-brands fa-yahoo", 
+        "fa-brands fa-yandex", "fa-brands fa-youtube"
+    ];
 
-        // Show the parent modal when the child modal is closed
-        childModalElement.addEventListener('hidden.bs.modal', function () {
-            parentModal.show();
+        // Container where icons will be displayed
+        const iconContainer = document.getElementById('iconContainer');
+
+        // Populate the icon container with all icons
+        allIcons.forEach(iconClass => {
+            const iconElement = document.createElement('i');
+            iconElement.className = `${iconClass} fa-2x icon-option`;
+            iconElement.style.cursor = 'pointer';
+            iconContainer.appendChild(iconElement);
         });
 
-        // Hide the parent modal when the child modal is shown
-        childModalElement.addEventListener('show.bs.modal', function () {
-            parentModal.hide();
+        // Handle icon selection
+        iconContainer.addEventListener('click', function (e) {
+            if (e.target && e.target.matches('.icon-option')) {
+                const selectedIcon = e.target.className;
+
+                // Update the hidden input with the selected icon class
+                document.getElementById('selectedIconInput').value = selectedIcon;
+
+                // Update the preview in the main modal
+                document.getElementById('selectedIconPreview').className = selectedIcon;
+
+                // Hide the icon selection modal
+                const iconModal = bootstrap.Modal.getInstance(document.getElementById('iconModal'));
+                iconModal.hide();
+            }
         });
-        
+
+        // Handle search input to filter icons
+        const iconSearch = document.getElementById('iconSearch');
+        iconSearch.addEventListener('input', function () {
+            const searchValue = iconSearch.value.toLowerCase();
+            const icons = iconContainer.querySelectorAll('.icon-option');
+            
+            icons.forEach(icon => {
+                if (icon.className.toLowerCase().includes(searchValue)) {
+                    icon.style.display = 'inline-block';
+                } else {
+                    icon.style.display = 'none';
+                }
+            });
+        });
     });
 </script>
 

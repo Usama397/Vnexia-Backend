@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="first-top-headerrr">
-                    <h5>Notifications</h5>
+                    <h5>Communication</h5>
                     <button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">Create
-                        Notifications</button>
+                        New</button>
                 </div>
                 <div class="main-natification-table">
                     <table class="table">
@@ -106,7 +106,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Notification</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create New</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

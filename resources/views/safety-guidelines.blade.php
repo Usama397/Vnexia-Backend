@@ -102,7 +102,9 @@
                 <form action="">
                     <div class="flex-input">
                         <label for="Image">Icon:</label>
-                        <input type="file" placeholder="Select Icon">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#iconModal">Select Icon</button>
+                         <!-- Hidden Input to Store the Selected Icon Class -->
+                         <input type="hidden" id="selectedIconInput" name="selectedIcon" value="fa-solid fa-icons">
                     </div>
                     <div class="flex-input">
                         <label for="Image">Image:</label>
@@ -268,6 +270,26 @@
 
 {{-- end of Gallary modal  --}}
 
+<!-- Icon Modal -->
+<div class="modal fade" id="iconModal" tabindex="-1" aria-labelledby="iconModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="iconModalLabel">Select an Icon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Search Input for Filtering Icons -->
+                <input type="text" id="iconSearch" class="form-control mb-3" placeholder="Search icons...">
+
+                <!-- Container to Display All Icons -->
+                <div id="iconContainer" class="icon-grid" style="display: flex; flex-wrap: wrap; gap: 15px; height: 400px; overflow-y: scroll;">
+                    <!-- Icons will be dynamically populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 @endsection

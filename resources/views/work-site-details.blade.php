@@ -43,7 +43,36 @@
                         </li>
                     </ul>
                 </div>
-                
+                <div class="hr-line"></div>
+                <div class="main-natification-table">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Risk Level</th>
+                                <th scope="col">Area</th>
+                                <th scope="col">Image/Video</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for ($i = 0; $i < 6 ; $i++)
+                            <tr>
+                                <td>01/24/2024</td>
+                                <td>No Helmet</td>
+                                <td>Low</td>
+                                <td>Area {{ $i + 1 }}</td>
+                                <td><button><i class="fa-solid fa-eye"></i></button></td>
+                            </tr>
+                        @endfor 
+                        </tbody>
+                    </table>
+                    <div class="main_loadmore-btn">
+                        <button class="load-more">
+                            Load More
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
