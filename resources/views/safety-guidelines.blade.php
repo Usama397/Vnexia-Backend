@@ -77,7 +77,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Work Site</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create Safety Guidelines</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -99,7 +99,7 @@
                        <textarea placeholder="Description"></textarea>
                     </div>
                     <div class="assign-user-pop">
-                        <button  type="button" class="assign-user" data-bs-toggle="modal" data-bs-target="#exampleModal1">Assign Users </button>
+                        <button  type="button" class="assign-user" data-bs-toggle="modal" data-bs-target="#exampleModal1">Select Check Points </button>
                     </div>
                     <div class="main_creat-btn">
                         <button type="submit">Create</button>
@@ -119,12 +119,12 @@
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog assing-userss">
-      <div class="modal-content assing-userss">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel1">Check Points </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+        <div class="modal-content assing-userss">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel1">Check Points </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
         <form action="">
             <div class="main-checkboxx safetly-guide">
                 <ul>
@@ -182,6 +182,5 @@
   </div>
 
 {{-- end of user assign modal  --}}
-
 
 @endsection

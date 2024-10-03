@@ -113,6 +113,7 @@
         integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function () {
             var path = window.location.pathname;
@@ -164,6 +165,28 @@ if (currentPath === '/check-points') {
     navList.classList.add('active');
 }
 </script>    
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the modals
+        const parentModalElement = document.getElementById('exampleModal');
+        const childModalElement = document.getElementById('exampleModal1');
+
+        // Initialize Bootstrap modals using JavaScript API
+        const parentModal = new bootstrap.Modal(parentModalElement);
+        const childModal = new bootstrap.Modal(childModalElement);
+
+        // Show the parent modal when the child modal is closed
+        childModalElement.addEventListener('hidden.bs.modal', function () {
+            parentModal.show();
+        });
+
+        // Hide the parent modal when the child modal is shown
+        childModalElement.addEventListener('show.bs.modal', function () {
+            parentModal.hide();
+        });
+    });
+</script>
 
 </body>
 

@@ -122,7 +122,7 @@
                     <div class="assign-user-pop">
                         <h6>Worksite + Area</h6>
                         <button type="button" class="assign-user" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal1">Assign Users </button>
+                            data-bs-target="#exampleModal1">Select Worksite + Area</button>
                     </div>
                     <div class="main_creat-btn">
                         <button type="submit">Create</button>
