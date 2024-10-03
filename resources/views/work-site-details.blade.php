@@ -15,12 +15,31 @@
                     <ul>
                         <li>
                             <div class="area">Area 01</div>
+                            <ul>
+                                <li><button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Area 01</div>
+                            <ul>
+                                <li><button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                         <li>
                             <div class="area">Area 01</div>
+                            <ul>
+                                <li><button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="area">Area 01</div>
+                            <ul>
+                                <li><button data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                                <li><button><i class="fa-solid fa-trash"></i></button></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -200,5 +219,8 @@
   </div>
 
 {{-- end of user assign modal  --}}
+
+
+
 
 @endsection

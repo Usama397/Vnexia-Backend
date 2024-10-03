@@ -20,43 +20,43 @@
             <div class="first-side-nav">
                 <nav>
                     <ul>
-                        <li><a href="#" class="logo">
-                                <img src="assets/images/vnexia-white-logo-nav.png" alt="">
+                        <li><a href="javascript:;" class="logo">
+                                <img src="{{asset('assets/images/vnexia-white-logo-nav.png')}}" alt="">
                             </a></li>
-                        <li><a href="/dashboard" class="navigat-items">
-                                <img src="assets/images/dashboard-nav.png" alt="">
+                        <li><a href="{{route('dashboard')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/dashboard-nav.png')}}" alt="">
                                 <span class="nav-item">Dashboard</span>
                             </a></li>
-                        <li><a href="/work-site" class="navigat-items">
-                                <img src="assets/images/construction-site-nav.png" alt="">
+                        <li><a href="{{route('work-site')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/construction-site-nav.png')}}" alt="">
                                 <span class="nav-item">Work Sites</span>
                             </a></li>
-                        <li><a href="/notification" class="navigat-items">
-                                <img src="assets/images/alarm-nav.png" alt="">
+                        <li><a href="{{route('notification')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/alarm-nav.png')}}" alt="">
                                 <span class="nav-item">Notifications</span>
                             </a></li>
-                        <li><a href="/safety-guidelines" class="navigat-items">
-                                <img src="assets/images/checking-nav.png" alt="">
+                        <li><a href="{{route('safety-guidelines')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/checking-nav.png')}}" alt="">
                                 <span class="nav-item">Safety Guidelines</span>
                             </a>
                             <ul id="navigation">
-                                <li><a href="/check-points" class="navigat-items">
-                                        <img src="assets/images/checkinglist-nav.png" alt="">
+                                <li><a href="{{route('check-points')}}" class="navigat-items">
+                                        <img src="{{asset('assets/images/checkinglist-nav.png')}}" alt="">
                                         <span class="nav-item">Check Points</span>
                                     </a></li>
                             </ul>
                         </li>
 
-                        <li><a href="/users" class="navigat-items">
-                                <img src="assets/images/user-nav.png" alt="">
+                        <li><a href="{{route('users')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/user-nav.png')}}" alt="">
                                 <span class="nav-item">Users</span>
                             </a></li>
-                        <li><a href="/media" class="navigat-items">
-                                <img src="assets/images/media-gallery-nav.png" alt="">
+                        <li><a href="{{route('media')}}" class="navigat-items">
+                                <img src="{{asset('assets/images/media-gallery-nav.png')}}" alt="">
                                 <span class="nav-item">Media</span>
                             </a></li>
                         <li><a href="#" class="navigat-items" class="logout">
-                                <img src="assets/images/logout-nav.png" alt="">
+                                <img src="{{asset('assets/images/logout-nav.png')}}" alt="">
                                 <span class="nav-item">Log out</span>
                             </a></li>
                     </ul>
@@ -83,7 +83,7 @@
                                         <p>Safety Manager</p>
                                     </div>
                                     <div class="user-img">
-                                        <img src="assets/images/user-img.png" alt="">
+                                        <img src="{{asset('assets/images/user-img.png')}}" alt="">
                                     </div>
                                 </div>
                             </li>
@@ -113,15 +113,27 @@
         integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+   
     <script>
-        $(function () {
-            var path = window.location.pathname;
-            // Remove 'a' from the selector to directly target .navigat-items
-            $('.navigat-items[href="' + path + '"]').addClass('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            var path = window.location.pathname; // Get the current path
+            var navItems = document.querySelectorAll('.navigat-items'); // Select all navigat-items
+    
+            navItems.forEach(function(item) {
+                var href = item.getAttribute('href'); // Get the href of each item
+                var hrefPath = new URL(href).pathname; // Extract the pathname from the href
+              
+                
+                // Check if the current path matches the href path
+                if (path === hrefPath) {
+                    item.classList.add('active'); // Add active class if it matches
+                }
+            });
         });
-
     </script>
+        
+    
 
 
     <script>
@@ -171,7 +183,39 @@ if (currentPath === '/check-points') {
         // Get the modals
         const parentModalElement = document.getElementById('exampleModal');
         const childModalElement = document.getElementById('exampleModal1');
+        const childModalElement1 = document.getElementById('exampleModal2');
+        // Initialize Bootstrap modals using JavaScript API
+        const parentModal = new bootstrap.Modal(parentModalElement);
+        const childModal = new bootstrap.Modal(childModalElement);
+        const childModal1 = new bootstrap.Modal(childModalElement1);
 
+        // Show the parent modal when the child modal is closed
+        childModalElement.addEventListener('hidden.bs.modal', function () {
+            parentModal.show();
+        });
+
+        // Hide the parent modal when the child modal is shown
+        childModalElement.addEventListener('show.bs.modal', function () {
+            parentModal.hide();
+        });
+         // Show the parent modal when the child modal is closed
+         childModalElement1.addEventListener('hidden.bs.modal', function () {
+            parentModal.show();
+        });
+
+        // Hide the parent modal when the child modal is shown
+        childModalElement1.addEventListener('show.bs.modal', function () {
+            parentModal.hide();
+        });
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the modals
+        const parentModalElement = document.getElementById('exampleModal');
+        const childModalElement = document.getElementById('exampleModal1');
         // Initialize Bootstrap modals using JavaScript API
         const parentModal = new bootstrap.Modal(parentModalElement);
         const childModal = new bootstrap.Modal(childModalElement);
@@ -184,6 +228,62 @@ if (currentPath === '/check-points') {
         // Hide the parent modal when the child modal is shown
         childModalElement.addEventListener('show.bs.modal', function () {
             parentModal.hide();
+        });
+        
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const listItems = document.querySelectorAll('#work-site-list li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // Remove active class from all items
+                listItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active class to the clicked item
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
+
+<script>
+    function toggleSelect(element) {
+        element.classList.toggle('selected');
+    }
+</script>
+
+<script>
+    document.getElementById('uploadButton').addEventListener('click', function() {
+    document.getElementById('fileInput').click();
+});
+
+// Optional: Handle the file selection
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const files = event.target.files;
+    // Process the selected files here (e.g., preview, upload)
+    console.log(files); // Example: log the selected files
+});
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all the view buttons
+        const viewButtons = document.querySelectorAll('.view-image-btn');
+
+        // Iterate over each button to attach event listener
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Get the image source from the data attribute
+                const imgSrc = this.getAttribute('data-image-src');
+
+                // Set the source of the modal image
+                const lightboxImage = document.getElementById('lightboxImage');
+                lightboxImage.setAttribute('src', imgSrc);
+            });
         });
     });
 </script>

@@ -54,17 +54,17 @@
                 <div class="main_counts-listing">
                     <ul>
                         <li>
-                            <img src="assets/images/dash-users.png" alt="">
+                            <img src="{{asset('assets/images/dash-users.png')}}" alt="">
                             <h5>Users</h5>
                             <p>24</p>
                         </li>
                         <li>
-                            <img src="assets/images/dash-work.png" alt="">
+                            <img src="{{asset('assets/images/dash-work.png')}}" alt="">
                             <h5>Work Sites</h5>
                             <p>4</p>
                         </li>
                         <li>
-                            <img src="assets/images/dash-alarm.png" alt="">
+                            <img src="{{asset('assets/images/dash-alarm.png')}}" alt="">
                             <h5>Notifications</h5>
                             <p>50</p>
                         </li>
