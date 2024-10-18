@@ -1,5 +1,6 @@
-@extends('layout.app')
-
+@extends('layouts.venxia')
+@section('title', $PAGE_TITLE)
+@section('UserName', $USERNAME)
 
 @section('contents')
 

@@ -286,49 +286,57 @@ if (currentPath === '/check-points') {
         "fa-brands fa-yandex", "fa-brands fa-youtube"
     ];
 
-        // Container where icons will be displayed
-        const iconContainer = document.getElementById('iconContainer');
+    const iconContainer = document.getElementById('iconContainer');
 
-        // Populate the icon container with all icons
-        allIcons.forEach(iconClass => {
-            const iconElement = document.createElement('i');
-            iconElement.className = `${iconClass} fa-2x icon-option`;
-            iconElement.style.cursor = 'pointer';
-            iconContainer.appendChild(iconElement);
-        });
+// Populate the icon container with all icons
+allIcons.forEach(iconClass => {
+    const iconElement = document.createElement('i');
+    iconElement.className = `${iconClass} fa-2x icon-option`;
+    iconElement.style.cursor = 'pointer';
+    iconContainer.appendChild(iconElement);
+});
 
-        // Handle icon selection
-        iconContainer.addEventListener('click', function (e) {
-            if (e.target && e.target.matches('.icon-option')) {
-                const selectedIcon = e.target.className;
+// Handle icon selection
+iconContainer.addEventListener('click', function (e) {
+    if (e.target && e.target.matches('.icon-option')) {
+        const selectedIcon = e.target.className;
 
-                // Update the hidden input with the selected icon class
-                document.getElementById('selectedIconInput').value = selectedIcon;
+        // Update the hidden input with the selected icon class
+        document.getElementById('selectedIconInput').value = selectedIcon;
 
-                // Update the preview in the main modal
-                document.getElementById('selectedIconPreview').className = selectedIcon;
+        // Remove 'selected' class from any previously selected icon
+        const previouslySelected = document.querySelector('.icon-option.selected');
+        if (previouslySelected) {
+            previouslySelected.classList.remove('selected');
+        }
 
-                // Hide the icon selection modal
-                const iconModal = bootstrap.Modal.getInstance(document.getElementById('iconModal'));
-                iconModal.hide();
-            }
-        });
+        // Add 'selected' class to the currently selected icon
+        e.target.classList.add('selected');
 
-        // Handle search input to filter icons
-        const iconSearch = document.getElementById('iconSearch');
-        iconSearch.addEventListener('input', function () {
-            const searchValue = iconSearch.value.toLowerCase();
-            const icons = iconContainer.querySelectorAll('.icon-option');
-            
-            icons.forEach(icon => {
-                if (icon.className.toLowerCase().includes(searchValue)) {
-                    icon.style.display = 'inline-block';
-                } else {
-                    icon.style.display = 'none';
-                }
-            });
-        });
+        // Optionally, update the preview in the main modal (if you have one)
+        document.getElementById('selectedIconPreview').className = selectedIcon;
+
+        // Hide the icon selection modal (if you want to close the modal on selection)
+        const iconModal = bootstrap.Modal.getInstance(document.getElementById('iconModal'));
+        iconModal.hide();
+    }
+});
+
+// Handle search input to filter icons
+const iconSearch = document.getElementById('iconSearch');
+iconSearch.addEventListener('input', function () {
+    const searchValue = iconSearch.value.toLowerCase();
+    const icons = iconContainer.querySelectorAll('.icon-option');
+
+    icons.forEach(icon => {
+        if (icon.className.toLowerCase().includes(searchValue)) {
+            icon.style.display = 'inline-block';
+        } else {
+            icon.style.display = 'none';
+        }
     });
+});
+});
 </script>
 
 <script>

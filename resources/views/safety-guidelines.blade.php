@@ -101,10 +101,11 @@
             <div class="modal-body">
                 <form action="">
                     <div class="flex-input">
-                        <label for="Image">Icon:</label>
+                        <label for="icon">Icon:</label>
                         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#iconModal">Select Icon</button>
-                         <!-- Hidden Input to Store the Selected Icon Class -->
-                         <input type="hidden" id="selectedIconInput" name="selectedIcon" value="fa-solid fa-icons">
+                        <!-- Hidden Input to Store the Selected Icon Class -->
+                        <input type="hidden" id="selectedIconInput" name="selectedIcon" value="fa-solid fa-icons">
+                        <i id="selectedIconPreview" class="fa-solid fa-icons"></i> <!-- Icon Preview -->
                     </div>
                     <div class="flex-input">
                         <label for="Image">Image:</label>

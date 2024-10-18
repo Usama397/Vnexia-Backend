@@ -10,6 +10,24 @@ section.login-sec {
     padding: 60px 0;
 }
 
+
+.button{
+    background: #14173A;
+    border-radius: 10px;
+    color: white;
+    padding: 7px 20px 7px 20px;
+    border: 0;
+}
+
+
+.button-white{
+    background: white;
+    border-radius: 10px;
+    color: #14173A;
+    padding: 7px 20px 7px 20px;
+    border: 0;
+}
+
 .main-login-page .vnexia-logo img {
     width: 539px;
     height: 114px;
@@ -423,7 +441,11 @@ section.work-site.mt-3 .mt-5.area-boxes ul {
     display: flex;
     list-style: none;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
 }
 
 section.work-site.mt-3 .mt-5.area-boxes ul li .area {
@@ -959,4 +981,15 @@ section.work-site.mt-3 .mt-5.area-boxes ul li:hover ul li {
     border: 0;
     border-bottom: 1px solid #14173a;
     margin: 50px 0 50px 0;
+}
+.icon-option {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.icon-option.selected {
+    border: 2px solid blue;
+    border-radius: 5px;
 }
